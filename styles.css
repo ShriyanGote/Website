@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+
+
+:root{
+    --primary-bg-color: #1c2833;
+    --secondary-bg-color: #212F3D;
+    --txt-white: #fff;
+    --primary-color: #28b463;
+    --box-shadow: 10px 10px #28b463;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Montserrat", sans-sserif;
+}
+
+a {
+    color: var(--txt-white);
+}
+
+header {
+    color: var(--txt-white);
+    background: var(--secondary-bg-color);
+    font-size: 1.2rem;
+    min-height: 100vh;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background: var(--primary-bg-color);
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    position: fixed;
+    padding: 1.5rem 0.5rem;
+    margin: 0 1.4rem;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    background: var(--primary-color);
+    width: 0%;
+    left: 0;
+    top: 53px;
+    transition: all 0.25s;
+}
+
+
+.resume-content{
+    color: var(--primary-color);
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.social-icons a{
+    padding: 0 1rem;
+}
+
+.social-icons a:hover{
+    color: var(--primary-color);
+    transition: all 0.3s;
+
+}
+
+.logo {
+    color: var(--primary-color);
+}
+
+.lead{
+    font-size: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+.name{
+    font-size: 5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+.content-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 84vh;
+    padding: 0% 10%;
+}
+
+.content-left{
+    width: 100%;
+    padding-top: -5rem;
+}
+
+.txt-content{
+    display: flex;
+    width: 100%;
+}
+
+.normal-txt{
+    font-size: 3rem;
+    width: 15%;
+}
+
+.change-txt{
+    font-size: 3.5rem;
+    padding-left: 0.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    position: relative;
+}
+
+.txt-content .change-txt::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #fff;
+    background: var(--secondary-bg-color);
+    animation: animateTxt 5s steps(25) infinite;
+}
+
+.content-left p{
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 1rem 0;
+    width: 70%;
+}
+
+
+.content-left button{
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 1rem 2rem;
+    margin: 2rem 2rem 0 0;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 02px;
+    transition: all 0.5s;
+}
+.content-left button:hover{
+    background: var(--primary-color);
+    border: none;
+    padding: 1rem 3rem;
+}
+.content-left button:active{
+    transform: scale(0.9);
+}
+
+.content-right img{
+    display: block;
+    min-height: 100%;
+    width: 100%;
+    border-radius: 05px;
+    margin-top: -1rem;
+}
+.content-right{
+    width: 45%;
+    box-shadow: var(--box-shadow);
+    border-radius: 05px;
+    transform: translateX(300%);
+    animation: imgAnimate 5s forwards;
+
+}
+.overall-content{
+    padding: 2rem;
+}
+.overall-content .number{
+    color: var(--primary-color);
+    margin-left: 8rem;
+    padding-right: 1.5rem;
+}
+.overall-content .line{
+    width: 50%;
+    padding-left: 1rem;
+    
+}
+.overall-content .title{
+    font-size: 3rem;
+}
+.overall-content .experience-top{
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+.overall-content .experience-content{
+    color: var(--primary-color);
+    margin-left: 10rem;
+}
+
+.overall-content .skills-content{
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+.overall-content .projects-content{
+    display: flex;
+    align-items: center;
+}
+.overall-content .contact-content{
+    display: flex;
+    align-items: center;
+}
+
+
+@keyframes imgAnimate{
+    to{
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes animateTxt{
+    3%{
+        left: 0%;
+    }
+    30%{
+        left: 100%;
+    }
+    80%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
